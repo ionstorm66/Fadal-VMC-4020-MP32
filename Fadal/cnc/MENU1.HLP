@@ -1,0 +1,24 @@
+                          HELP SCREEN
+                          컴컴컴컴컴�
+
+To move arrow UP press the <cursor up> key.
+To move arrow DOWN press the <cursor down> key.
+
+F1---To continue with your pattern after you have entered all the data with
+     acceptable values (70 holes is the maximum number for the row and columns).
+F2---To return to the hole pattern menu.
+F3---To display this help menu.
+
+FIRST HOLE'S X & Y---------Enter the coordinates of the first circle on the
+                           first row and first column.
+ANGLE OF ROWS--------------Enter the default angle of all the rows in
+                           relation to the X axis.
+ANGLE OF COLUMNS-----------Enter the default angle of the columns in
+                           relation to the X axis.
+DISTANCE BETWEEN COLUMNS---Enter the default distance between the holes on
+                           a row.
+NUMBER OF COLUMNS----------Enter the default number of holes on a row.
+
+ALL QUESTIONS MUST BE ANSWERED.
+E
+

@@ -1,0 +1,29 @@
+9-13-94
+
+The file "CNCMAINX.EXE" is to used in the 32MP control.  This update allows
+high speed transfer in the binary format.
+Copy this file to the C:\CNC subdirectory.
+
+The file "CNCMAIND.EXE" is a desktop version of the "Memory Manager" used
+on a IBM compatible computer (see requirements).
+The main feature is to support the 1000 blks per second off-line "DNC" from
+another computer other than the 32MP control.  There are five functions
+available off-line:
+1) Disk to CNC memory transfer
+2) CNC memory to disk transfer
+3) Run from disk (DNC)
+4) Compress file (Binary)
+5) Communication Parameters
+
+The following items are required in order to use the desk top version:
+PC Requirements:
+ DOS 5.0 or Higher
+ 512K memory
+ VGA Graphics
+ Mouse
+ Communication Port
+
+CNC Requirements:
+ 1400-3 or Higher
+ Software 94.1L or Higher
+

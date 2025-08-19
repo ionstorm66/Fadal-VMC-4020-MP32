@@ -1,0 +1,23 @@
+     ษอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+     บ                    FADAL SOFTWARE ERROR CODES                   บ
+     ฬออออออออออออออออออออออออออออออออหออออออออออออออออออออออออออออออออน
+     บ04 OUT OF DATA                  บ52 BAD FILE NUMBER              บ
+     บ05 ILLEGAL FUNCTION CALL        บ53 FILE NOT FOUND               บ
+     บ06 OVERFLOW                     บ54 BAD FILE MODE                บ
+     บ07 OUT OF MEMORY                บ55 FILE ALREADY OPEN            บ
+     บ11 DIVISION BY ZERO             บ57 DEVICE I/O ERROR             บ
+     บ12 ILLEGAL DIRECT               บ58 FILE ALREADY EXISTS          บ
+     บ13 TYPE MISMATCH                บ61 DISK FULL                    บ
+     บ14 OUT OF STRING SPACE          บ62 INPUT PAST END               บ
+     บ15 STRING TOO LONG              บ63 BAD RECORD NUMBER            บ
+     บ16 STRING FORMULA TOO COMPLEX   บ64 BAD FILE NAME                บ
+     บ17 CAN'T CONTINUE               บ67 TOO MANY FILES               บ
+     บ18 UNDEFINED USER FUNCTION      บ68 DEVICE UNAVAILABLE           บ
+     บ19 NO RESUME                    บ69 COMMUNICATION BUFFER OVERFLOWบ
+     บ21 UNPRINTABLE ERROR            บ70 DISK WRITE PROTECTED         บ
+     บ22 MISSING OPERAND              บ71 DISK NOT READY               บ
+     บ23 LINE BUFFER OVERFLOW         บ72 DISK MEDIA ERROR             บ
+     บ24 DEVICE TIMEOUT               บ74 RENAME ACROSS DISKS          บ
+     บ25 DEVICE FAULT                 บ75 PATH/FILE ACCESS ERROR       บ
+     บ27 OUT OF PAPER                 บ76 PATH NOT FOUND               บ
+     ศออออออออออออออออออออออออออออออออสออออออออออออออออออออออออออออออออผ

@@ -1,0 +1,23 @@
+                          HELP SCREEN
+                          컴컴컴컴컴�
+
+
+ F1---To continue with your pattern after you have entered all the data with
+      acceptable values.
+F10---To return to the hole pattern menu.
+ F3---To display this help menu.
+
+CIRCLES CENTER X & Y---Enter the coordinates of the center of the bolt
+                       circle.
+
+LENGTH OF RADIUS-------Enter the default value of the radius of the bolt
+                       circle.
+
+STARTING RADIUS ANGLE--Angle of radius for the first hole in respect to the
+                       X axis.
+
+NUMBER OF RADII--------Number of holes on the bolt circle.
+
+ALL QUESTIONS MUST BE ANSWERED WITH A NUMERIC VALUE.
+E
+

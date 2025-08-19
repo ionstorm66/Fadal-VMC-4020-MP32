@@ -1,0 +1,621 @@
+                             FADAL Emulator
+
+
+Overview
+--------
+
+   The FADAL Emulator may be used to debug or check machine programs. 
+   The Emulator is designed to simulate the machine control. It may also 
+   be used to back plot an NC program. This function allows the user to 
+   graphically display the machine tool path.
+
+   The Emulator, like the machine, may be operated in either the Command 
+   Mode or the Command Menu Mode. The selection is made in the parameter 
+   settings (SETP).
+
+   Notes:
+
+      ESCAPE button = MANUAL button
+
+         The FADAL EMULATOR looks just like the screen on the CNC 
+         portion of the machine, blue with white lettering. Since the 
+         Emulator is a look-a-like, it will prompt the user to press the 
+         'MANUAL' button on certain operations. THIS IS REPLACED IN THE 
+         EMULATOR BY PRESSING THE 'ESC' (ESCAPE) BUTTON.
+
+      Mouse
+
+         The MS-Mouse may be utilized with the CNC Emulator. The mouse 
+         may be used with the Draw, Read Disk, and Save Disk commands. 
+
+         When using the Draw command move the mouse to highlight the 
+         menu selection desired. This is indicated by the selection 
+         changing to the color red. After highlighting the desired menu 
+         selection, click either mouse button to execute the selection. 
+         Move the arrow to the desired location and click either mouse 
+         button to perform the desired operation.
+
+
+Command Mode for the Emulator
+-----------------------------
+
+   The Command Mode (ENTER NEXT COMMAND <) is selected by using the SETP 
+   command to view and edit the parameter settings. The CMD MENU option 
+   should be OFF.
+
+   Standard Control Commands
+
+      The commands listed below operate identically to the commands in 
+      the machine control:
+
+         CH      Change Program Line
+         CO      Copy Program Lines
+         DE      Delete Program Lines
+         DF      Display Fixture Offsets
+         DR      Draw Program
+         DT      Display Tool Table
+         FO      Fixture Offset
+         IN      Insert Program Lines
+         LI      List Program Lines
+         ME      Memory Free
+         MU      Menu
+         NE      New Program
+         NU      Number Program Lines
+         PA      Page Editor
+         PR      Program Maintenance
+         RI      Reinitialize
+         SETIN   Set Inches
+         SETME   Set Metric
+         SETP    Set Parameters
+         SU      Sum Program
+         TO      Tool Data Input
+
+   Additional Commands
+
+      There are five commands that are specific to the FADAL Emulator:  
+
+         AM      Alter Memory
+         QU      Quit
+         RD      Read from Disk
+         SD      Save to Disk
+         VS      View last Screen
+
+      These commands are ONLY used with the Emulator.
+
+         Alter Memory: AM
+
+            This command allows the user to select the amount of RAM 
+            memory for the Emulator to use. There are no parameters 
+            associated with this command. Enter the AM command and the 
+            following menu is displayed:
+
+               AVAILABLE MEMORY OPTIONS:
+               (MORE MEMORY ALLOWS MORE PROGRAMS BUT WILL SLOW THE 
+                  SYSTEM DOWN)
+               1) 38K
+               2) 100K
+               3) 166K
+               4) 294K
+               5) 422K
+               CURRENT AVAILABLE MEMORY: (current amount, i.e. 294)
+               HOW MUCH MEMORY DOES YOUR MACHINE HAVE [1]?
+
+            The prompt defaults to option 1. Press ENTER to accept the 
+            default selection or enter the desired memory option number 
+            and press ENTER. When the Emulator is using more memory than 
+            the selection the following message appears:
+
+               CANNOT ALTER MEMORY WITHOUT DESTROYING DATA
+               DO YOU WISH TO PROCEED WITH MEMORY REDUCTION?
+
+            Press Y and then press ENTER to change the memory 
+            requirement. The Emulator deletes the programs from memory 
+            and then resets the Emulator. Press N to abort the command.
+
+         Quit: QU
+
+            This command is used to exit the Emulator software. The 
+            program in the Emulator is retained in memory.
+
+            WARNING: To prevent the loss of program changes the program 
+                     MUST be saved prior to exiting the software.
+
+         Read Disk: RD
+
+            This command is used to load disk files into the Emulator 
+            memory. After entering the RD command a split screen is 
+            displayed.
+
+            Left Side Display
+
+               The left side of the screen displays four boxes labeled 
+               UP, TYPE, DOWN, and ABORT. The files in the data 
+               directory are listed below the four boxes. The data 
+               directory is displayed at the bottom of the left side.
+
+               UP
+
+                  Place the pointing arrow inside this box, and press 
+                  either mouse button, to select this option. This 
+                  option is effective ONLY when there is more than one 
+                  page of the filename listing. The UP option pages up 
+                  through the filename listing.
+
+               DOWN
+
+                  The DOWN option is used to page down through the 
+                  filename listing. This option is effective ONLY when 
+                  there is more than one page of the filename listing. 
+                  Place the pointing arrow inside this box, and press 
+                  either mouse button to select this option.
+
+               TYPE
+
+                  The TYPE box allows the user to input the filename to 
+                  be used. When this box is selected the filename box on 
+                  the right side of the screen is cleared for input. 
+                  Enter the filename to load into the Emulator memory. 
+                  When the filename has been typed, the right side of 
+                  the screen displays the file listing and drawing. 
+                  Press ENTER to load the file into the memory.
+
+                  The user may also enter wildcards for a listing.
+
+                  Example:
+
+                     To view the list of all programs in the directory 
+                     that have an NCC extension enter the following:
+
+                        *.NCC 
+
+                     When this wildcard entry is typed the list of all 
+                     files with an NCC extension is displayed.
+
+               ABORT
+
+                  Select this option to discontinue the RD command. The 
+                  file displayed is NOT loaded into memory.
+
+            Right Side Display
+
+               The right side of the screen is separated into three 
+               sections. There is a Filename box, a File listing box, 
+               and a File drawing box.
+
+               Filename Box
+
+                  This box displays the name of the file selected from 
+                  the filename listing or input with the TYPE option as 
+                  described above.
+
+               File Listing Box
+
+                  A listing of the program is displayed, in the second 
+                  box, for the selected filename. This is for display 
+                  purposes ONLY.
+
+               File Drawing Box
+
+                  The third box displays the drawing for the selected 
+                  filename. The file MUST have been drawn with the DR 
+                  command before graphics may be displayed.
+
+            File selection
+
+               Selection of a file from the filename listing is 
+               accomplished with the mouse. Move the pointing arrow to 
+               the desired filename and press either button. The 
+               filename is displayed in the filename box at the top of 
+               the right side of the screen. The file is listed on the 
+               right side of the screen in the file listing box.
+
+               To load the selected file into memory using the mouse, 
+               follow the procedure below.
+
+                  1) Move the pointing arrow to the desired filename in 
+                     the filename listing.
+
+                  2) Press either mouse button. The file is displayed on 
+                     the right side of the screen.
+
+                  3) Move the pointing arrow to the filename in the 
+                     filename box on the right side of the screen.
+
+                  4) Press either mouse button. This loads the program 
+                     into memory and exits the RD command.
+
+         Save Disk: SD
+
+               The SD command is used to save the current program to a 
+               disk file.
+
+               Data Option
+
+                  The Data Options are as follows:
+
+                     0 = Program and Tooling Data
+                     1 = Tooling Data Only
+                     2 = Program Data Only
+                     3 = All Programs In Memory
+
+               After entering the SD command, the same screen as the RD 
+               command is displayed. The left side of the screen 
+               operates the same. The right side of the screen displays 
+               the same data as the RD command, for the program in 
+               current memory. The filename to use may be selected from 
+               the listing or typed in.
+
+               Save the file using the same procedures as the RD command 
+               uses to load a file.
+
+         View Screen: VS
+
+            This command displays the last graphic draw display that was 
+            saved using the saVe screen command.
+
+
+Command Menu Mode for the Emulator
+----------------------------------
+
+   The Command Menu Mode is similar to the machine control. There are 
+   nine option selections available from the main menu.
+
+      1) SETUP
+
+         There are three options available when SETUP is selected.
+
+         1) TOOLS
+
+            This selection performs the DT command and displays the tool 
+            table.
+
+         2) FIXTURES
+
+            This selection performs the DF command and displays the 
+            fixture offsets.
+
+         3) PARAMETERS
+
+            This selection performs the SETP command and displays the 
+            parameter settings menu.
+
+      2) MEMORY
+
+         There are three options available for this selection.
+
+         1) AVAILABLE
+
+            This option performs the ME command and displays the 
+            percentage of free memory.
+
+         2) ADJUST
+
+            This option performs the AM command described at the 
+            beginning of the Emulator section.
+
+         3) REINITIALIZE
+
+            This option performs the RI command as described in the 
+            FADAL Users Manual.
+
+      3) PROGRAM MANAGEMENT
+
+         This selection has four options available.
+
+         1) READ FROM DISK
+
+            This option performs the RD command.
+
+         2) SAVE TO DISK
+
+            This option performs the SD command.
+
+         3) LIBRARY
+
+            This option performs the PR command.
+
+         4) CLEAR
+
+            This option performs the NE command.
+
+      4) RUN
+
+         There are two options for this selection.
+
+         1) DRAW
+
+            This selection performs the DR command.
+
+         2) SUMMARY
+
+            This selection has two options available.
+
+            1) BEGIN
+
+               This option performs the SU command with all parameters 
+               set to zero except the display option. The display option 
+               is set to one (SU,,,,1).
+
+            2) SELECT OPTIONS
+
+               This selection prompts for input of each SU command 
+               option. At the end of input the desired SU command is 
+               performed.
+
+      5) VIEW SCREEN
+
+         This selection performs the VS command and displays the last 
+         saved draw screen.
+
+      6) COMMAND
+
+         Selecting this option places the Emulator in the Command mode. 
+         Any Emulator command may be entered and executed in this mode.
+
+      7) MESSAGE
+
+         This option displays the last screen message.
+
+      9) QUIT
+
+         Select this option to exit the Emulator software. The programs 
+         in the Emulator memory are retained in the memory. When 
+         Emulator is started again, the same program and offsets are in 
+         current memory.
+
+
+Graphics for the Emulator (‘DR’ command or ‘G’ key from Page Editor)
+-------------------------
+
+   This command is used to back plot the machine program. The program in 
+   current memory is back plotted. The graphic display shows the tool 
+   motion for the program. 
+
+   Note:  The graphics in the EMULATOR are different than the CNC88 HS 
+          graphics.
+
+   When the DR command is entered or from the Page Editor the G key is 
+   pressed, the graphics screen is displayed. The left side of the 
+   screen displays the options available during the Draw command. During 
+   the draw sequence, at the bottom of the screen will be displayed the 
+   tool number, diameter number, fixture number, spindle speed, and 
+   feedrate. Errors that occur are displayed at the top of the screen.
+
+   The mouse is functional with the menus using the procedures below.
+
+      1) Move the mouse until the desired option changes color to RED.
+
+      2) Press either mouse button one time to select the option.
+
+   Menu options have one letter that is capitalized. The option may also 
+   be selected by pressing this letter.
+
+   Auto
+
+      This option begins drawing the program tool motion. The drawing 
+      continues until an error occurs or another option is selected. 
+      When an error occurs the user is prompted to continue or save the 
+      screen. The Auto is stopped by using the Single, or Escape 
+      (Manual) options.
+
+   Single
+
+      The Single option operates in the same manner as Single Step on 
+      the machine. One line of the program is displayed each time the 
+      option is selected. Press the SPACEBAR to advance one line.
+
+   Paint
+
+      The paint option may be selected at any time. The graphics screen 
+      is cleared of the tool path drawing. After the screen is cleared, 
+      the Auto option begins drawing from the last position .
+
+   Zoom
+
+      This option allows the user to increase or decrease the size of 
+      the part drawing. Select the Zoom option to display the Zoom Menu 
+      and screen grid. The current drawing remains in the graphic 
+      display area. The mouse MUST be used to increase the size of the 
+      drawing, by creating a Zoom box on the drawing. The procedure 
+      described below is used to Zoom the drawing.
+
+         1) Move the pointing arrow to a position over a corner of the 
+            Zoom box.
+
+         2) Press and hold the left mouse button down.
+
+         3) Drag the pointing arrow to the opposite X and Y corner for 
+            the box. The box is displayed as it is drawn. The Zoom box 
+            represents the graphic display area. The box is increased to 
+            the size of the graphic display area. The entities inside 
+            the box are correspondingly increased.
+
+         4) Select the Continue option. The graphic display area and 
+            main menu are displayed. Drawing resumes if in Auto mode.
+
+      Full table (zoom)
+
+         The Full table option shows the entire machine table size in 
+         the display area. The table size is set with the SETP command. 
+         The Full table display shows a grid pattern with one inch 
+         squares. A RED square is displayed on the grid pattern. This 
+         red square depicts the area of the table that is depicted on 
+         the graphic draw display. The drawing may be zoomed up or down 
+         by creating a new Zoom box on this display.
+
+         To return to Full table size graphic draw display, select the 
+         Full table option then select Continue.
+
+      Continue (zoom)
+
+         The selection of the Continue option returns to the main 
+         graphics menu. Drawing resumes if in Auto mode.
+
+      Escape (zoom)
+
+         The Escape option returns to the main menu. Drawing resumes         
+         if in Auto mode.
+
+   Tools
+
+      This option allows the user to change tool diameters. The display 
+      color for each tool is also selectable. This enables the user to 
+      identify the tool number by the color displayed while back 
+      plotting.
+
+      The tool list displayed, when the option is selected, is the 
+      current tool table data in the Emulator. This may be edited or 
+      deleted. The data may be typed into the tool table or read from 
+      the tool table. The data may be read from a disk file or saved to 
+      a disk file.
+
+      Selecting Data
+
+         Get table
+
+            Select this option to input the tool diameter data into the 
+            table. The current tool table data is loaded when the DR 
+            command is entered. If temporary changes have been made, 
+            this option reads the current tool table data.
+
+         Put table
+
+            This option is used to place the edited data into the 
+            current tool table. After editing tool data, use this option 
+            to insure the Emulator uses this data.
+
+         Load tools
+
+            This option loads tool data from a disk file. These files 
+            have been saved using the Save tools option. See the RD 
+            command for procedures to load tools.
+
+         Save tools
+
+            This option saves the tool data as a disk file. See the SD 
+            command for procedures to save tools.
+
+         page Up
+
+            Select this option to page through the tool table. The mouse 
+            may also be used to select UP on the tool list.
+
+         page Down
+
+            This option is used to page down through the tool table. The 
+            mouse may also be used to select DOWN on the tool list.
+
+         Edit Data
+
+            Move the mouse until a box is displayed around the tool data 
+            to edit. Press either mouse button and the number resets to 
+            zero. Enter the new tool data and press ENTER. Use the Put 
+            tools option to replace the value in the tool table.
+
+         Edit Colors
+
+            Move the mouse until a box is displayed around the color to 
+            change. Press either mouse button. Another box is displayed 
+            around the same color in the second set of colors. Move the 
+            box to the new color. Press either button on the mouse to 
+            change the color.
+
+         diameter (radius)
+
+            This option MUST be selected by the mouse. This option 
+            toggles between diameter and radius. When diameter is 
+            selected the tool data uses the tool diameter. When radius 
+            is selected the tool data uses the tool radius.
+
+         Reset
+
+            The Reset option is used to reset all tool data to zero. Use 
+            the Put tools option to clear the tool table data.
+
+         Continue
+
+            This option returns to the draw main menu. The drawing is 
+            resumed if using the Auto option.
+
+   speeD
+
+      There are three speeds at which the draw will perform. These are 
+      slow, medium, and fast. Select the appropriate option for the 
+      speed desired. Select the Escape option to return to the drawing.
+
+   Rotate
+
+      This option may be used to display the tool path drawing in 
+      different views. The display may be rotated in the 2D or 3D 
+      planes. The directions of rotation available are as follows: xy 
+      ccw, xy cw, xz ccw, xz cw, yz ccw, and yz cw. While back plotting 
+      the tool width is apparent only in 2D. In other view selections 
+      the tool center line is depicted by a colored line.
+
+      hOme
+
+         Select the hOme option to return to the XY view without tool 
+         width display.
+
+      2-D
+
+         The 2-D option returns to the draw sequence. The drawing is 
+         finished in the 2D view. The tool diameter is depicted while 
+         back plotting in this view.
+
+      Continue
+
+         Continue returns to the main graphics menu.
+
+      Escape
+
+         This option is used to exit the rotation menu without using any 
+         rotation.
+
+   saVe scrn
+
+
+      The drawing in the graphic display area may be saved to a disk 
+      file. Select this option to save a drawing file. The last saved 
+      drawing will be overwritten.
+
+   redraW
+
+      When this option is selected, the user is prompted for a start 
+      string. This string may be any code in the program. To begin 
+      drawing at a specific tool, enter the T word for the tool at the 
+      prompt. Press ENTER, without entering a string, to begin at the 
+      start of the program.
+
+      Example:
+
+         To begin at tool number three, type T3 at the prompt and press 
+         ENTER. The redraW option searches the program for the T3 code. 
+         The drawing begins from the line with the T3 code. The error 
+         message CANNOT FIND: is displayed at the bottom of the screen 
+         if the code is not in the program. Enter a correct code and try 
+         again. 
+
+      After entering the start string the software returns to the main 
+      menu. Select the Auto or Single option to begin drawing from the 
+      specified start string. 
+
+   Help
+
+      The Help option displays a basic explanation of each selected 
+      option. To view a help screen follow the procedure below.
+
+         1) Move the mouse until the desired option changes to the color 
+            RED.
+
+         2) Press the letter H. The option changes to the color white. 
+            The brief explanation of the option is displayed below the 
+            option.
+
+         3) Press ENTER to continue and return to the main menu.
+
+   Escape
+
+      Select the Escape option or press the ESC key to exit the DR 
+      command. This returns the Emulator to the Command mode.
+
